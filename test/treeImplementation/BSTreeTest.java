@@ -164,15 +164,4 @@ public class BSTreeTest {
         assertEquals(Integer.valueOf(10), iterator.next());
     }
 
-    // @Test
-    // public void testPostorderIterator() {
-    //     BSTreeNode<Integer> root = new BSTreeNode<>(10);
-    //     root.setLeft(new BSTreeNode<>(5));
-    //     root.setRight(new BSTreeNode<>(15));
-
-    //     PostOrderIterator<Integer> iterator = new PostOrderIterator<>(root);
-    //     assertEquals(Integer.valueOf(5), iterator.next());
-    //     assertEquals(Integer.valueOf(15), iterator.next());
-    //     assertEquals(Integer.valueOf(10), iterator.next());
-    // }
 }
