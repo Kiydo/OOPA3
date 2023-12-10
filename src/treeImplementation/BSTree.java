@@ -6,6 +6,23 @@ import utilities.Iterator;
 public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
     private BSTreeNode<E> root;
 
+    // for Debugging
+    public void printTree() {
+        System.out.println("Printing Tree Structure:");
+        printTree(root);
+    }
+
+    public void printTree(BSTreeNode<E> node) {
+        if (node != null) {
+            System.out.println("Node: " + node.getData() +
+                    ", Left: " + (node.getLeft() != null ? node.getLeft().getData() : null) +
+                    ", Right: " + (node.getRight() != null ? node.getRight().getData() : null));
+            printTree(node.getLeft());
+            printTree(node.getRight());
+        }
+    }
+    // End of Debugging
+
     @Override
     public BSTreeNode<E> getRoot() {
         return root;

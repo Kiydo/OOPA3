@@ -6,10 +6,10 @@ import utilities.Iterator;
 public class PreOrderIterator<E extends Comparable<? super E>> implements Iterator<E> {
 
     private BSTreeNode<E> current;
-    private BSTreeNode<E> root; // Add this field
+    private BSTreeNode<E> root;
 
     public PreOrderIterator(BSTreeNode<E> root) {
-        this.root = root; // Initialize the root field
+        this.root = root;
         this.current = root;
     }
 
@@ -24,7 +24,7 @@ public class PreOrderIterator<E extends Comparable<? super E>> implements Iterat
             throw new NoSuchElementException();
         }
         E data = current.getData();
-
+        System.out.println("data: " + data);
         // First, check the left subtree
         if (current.getLeft() != null) {
             current = current.getLeft();

@@ -9,6 +9,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.NoSuchElementException;
+
 import utilities.BSTreeADT;
 import utilities.Iterator;
 import treeImplementation.BSTree;
@@ -155,13 +158,38 @@ public class BSTreeTest {
     @Test
     public void testPostorderIterator() {
         bst.add(10);
-        bst.add(5);
-        bst.add(15);
+    bst.add(5);
+    bst.add(15);
 
-        Iterator<Integer> iterator = bst.postorderIterator();
-        assertEquals(Integer.valueOf(5), iterator.next());
-        assertEquals(Integer.valueOf(15), iterator.next());
-        assertEquals(Integer.valueOf(10), iterator.next());
+    Iterator<Integer> iterator = bst.postorderIterator();
+
+    // Print the post-order traversal for debugging purposes
+    // ((PostOrderIterator<Integer>) iterator).printTraversal();
+
+    // Now, assert the values
+    assertTrue(iterator.hasNext());
+    assertEquals(Integer.valueOf(5), iterator.next());
+
+    assertTrue(iterator.hasNext());
+    assertEquals(Integer.valueOf(15), iterator.next());
+
+    assertTrue(iterator.hasNext());
+    assertEquals(Integer.valueOf(10), iterator.next());
+
+    // Ensure that there are no more elements
+    assertFalse(iterator.hasNext());
+    assertThrows(NoSuchElementException.class, iterator::next);
+
+
+        // bst.printTree();
+        // PostOrderIterator<Integer> iterator = new PostOrderIterator<>(bst.getRoot());
+        // iterator.printTraversal();
+
+        // bst.printTree();    
+        // Iterator<Integer> iterator = bst.postorderIterator();
+        // assertEquals(Integer.valueOf(10), iterator.next());
+        // assertEquals(Integer.valueOf(5), iterator.next());
+        // assertEquals(Integer.valueOf(15), iterator.next());
     }
 
 }
