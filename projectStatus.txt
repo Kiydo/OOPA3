@@ -1,1 +1,2 @@
 Completness of the assignment: 100%
+Known deficiencies / missing functionality: none
