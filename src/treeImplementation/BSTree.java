@@ -51,6 +51,9 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
 
     @Override
     public boolean contains(E entry) throws NullPointerException {
+        if (entry == null) {
+            throw new NullPointerException("Cannot search for a null value.");
+        }
         return searchNode(root, entry) != null;
     }
 
@@ -201,6 +204,4 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
     public Iterator<E> postorderIterator() {
         return new PostOrderIterator<E>(root);
     }
-
-    
 }
