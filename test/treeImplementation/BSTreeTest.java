@@ -17,15 +17,26 @@ import utilities.Iterator;
 import treeImplementation.BSTree;
 import treeImplementation.BSTreeNode;
 
+/**
+ * Test cases for the Binary Search Tree implementation (BSTree).
+ */
 public class BSTreeTest {
 
     private BSTree<Integer> bst;
 
+    /**
+     * Sets up a new Binary Search Tree before each test.
+     */
     @BeforeEach
     public void setUp() {
         bst = new BSTree<>();
     }
 
+    /**
+     * Tests the retrieval of the root node in the Binary Search Tree.
+     * Verifies if the root node is appropriately retrieved or set to null.
+     * Additionally, checks if the root node's data matches the expected value.
+     */
     @Test
     public void testGetRoot() {
        assertNull(bst.getRoot());
@@ -35,6 +46,11 @@ public class BSTreeTest {
         assertNotNull(bst.getRoot());
     }
 
+
+    /**
+     * Tests the calculation of the height of the Binary Search Tree.
+     * Verifies if the height is correctly computed when nodes are added at different levels.
+     */
     @Test
     public void testGetHeight() {
         assertEquals(0, bst.getHeight());
@@ -47,6 +63,10 @@ public class BSTreeTest {
         assertEquals(2, bst.getHeight());
     }
 
+    /**
+     * Tests the calculation of the size of the Binary Search Tree.
+     * Verifies if the size is correctly computed when nodes are added.
+     */
     @Test
     public void testSize() {
         assertEquals(0, bst.size());
@@ -59,6 +79,10 @@ public class BSTreeTest {
         assertEquals(3, bst.size());
     }
 
+    /**
+     * Tests the isEmpty method of the Binary Search Tree.
+     * Verifies if the method returns true when the tree is empty and false otherwise.
+     */
     @Test
     public void testIsEmpty() {
         assertTrue(bst.isEmpty());
@@ -67,6 +91,10 @@ public class BSTreeTest {
         assertFalse(bst.isEmpty());
     }
 
+    /**
+     * Tests the clear method of the Binary Search Tree.
+     * Verifies if the method clears the tree and sets the root node to null.
+     */
     @Test
     public void testClear() {
         bst.add(10);
@@ -76,6 +104,10 @@ public class BSTreeTest {
         assertTrue(bst.isEmpty());
     }
 
+    /**
+     * Tests the contains method of the Binary Search Tree.
+     * Verifies if the method returns true when the tree contains the element and false otherwise.
+     */
     @Test
     public void testContains() {
         assertFalse(bst.contains(10));
@@ -87,6 +119,10 @@ public class BSTreeTest {
         assertFalse(bst.contains(15));
     }
 
+    /**
+     * Tests the add method of the Binary Search Tree.
+     * Verifies if the method adds the element to the tree and increments the size.
+     */
     @Test
     public void testAdd() {
         assertTrue(bst.isEmpty());
@@ -96,6 +132,10 @@ public class BSTreeTest {
         assertEquals(1, bst.size());
     }
 
+    /**
+     * Tests the search method of the Binary Search Tree.
+     * Verifies if the method returns the node with the element and null otherwise.
+     */
     @Test
     public void testSearch() {
         assertNull(bst.search(10));
@@ -107,6 +147,10 @@ public class BSTreeTest {
         assertNull(bst.search(15));
     }
 
+    /**
+     * Tests the removeMin method of the Binary Search Tree.
+     * Verifies if the method removes the element from the tree and decrements the size.
+     */
     @Test
     public void testRemoveMin() {
         assertNull(bst.removeMin());
@@ -119,6 +163,10 @@ public class BSTreeTest {
         assertEquals(2, bst.size());
     }
 
+    /**
+     * Tests the removeMax method of the Binary Search Tree.
+     * Verifies if the method removes the element from the tree and decrements the size.
+     */
     @Test
     public void testRemoveMax() {
         assertNull(bst.removeMax());
@@ -131,6 +179,11 @@ public class BSTreeTest {
         assertEquals(2, bst.size());
     }
 
+
+    /**
+     * Tests the functionality of the InorderIterator in the Binary Search Tree.
+     * Verifies if the iterator correctly traverses elements in ascending order.
+     */
     @Test
     public void testInorderIterator() {
         bst.add(10);
@@ -143,6 +196,10 @@ public class BSTreeTest {
         assertEquals(Integer.valueOf(15), iterator.next());
     }
 
+    /**
+     * Tests the functionality of the PreorderIterator in the Binary Search Tree.
+     * Verifies if the iterator correctly traverses elements in pre-order traversal.
+     */
     @Test
     public void testPreorderIterator() {
         bst.add(10);
@@ -154,6 +211,11 @@ public class BSTreeTest {
         assertEquals(Integer.valueOf(5), iterator.next());
         assertEquals(Integer.valueOf(15), iterator.next());
     }
+
+    /**
+     * Tests the functionality of the PostorderIterator in the Binary Search Tree.
+     * Verifies if the iterator correctly traverses elements in post-order traversal.
+     */
 
     @Test
     public void testPostorderIterator() {
