@@ -33,6 +33,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the retrieval of the root node in the Binary Search Tree.
      * Verifies if the root node is appropriately retrieved or set to null.
      * Additionally, checks if the root node's data matches the expected value.
@@ -48,6 +49,7 @@ public class BSTreeTest {
 
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the calculation of the height of the Binary Search Tree.
      * Verifies if the height is correctly computed when nodes are added at different levels.
      */
@@ -64,6 +66,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the calculation of the size of the Binary Search Tree.
      * Verifies if the size is correctly computed when nodes are added.
      */
@@ -80,6 +83,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the isEmpty method of the Binary Search Tree.
      * Verifies if the method returns true when the tree is empty and false otherwise.
      */
@@ -92,6 +96,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the clear method of the Binary Search Tree.
      * Verifies if the method clears the tree and sets the root node to null.
      */
@@ -105,6 +110,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the contains method of the Binary Search Tree.
      * Verifies if the method returns true when the tree contains the element and false otherwise.
      */
@@ -120,6 +126,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method of {@link BSTree#remove(E)}.
      * Tests the add method of the Binary Search Tree.
      * Verifies if the method adds the element to the tree and increments the size.
      */
@@ -133,6 +140,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the search method of the Binary Search Tree.
      * Verifies if the method returns the node with the element and null otherwise.
      */
@@ -148,6 +156,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the removeMin method of the Binary Search Tree.
      * Verifies if the method removes the element from the tree and decrements the size.
      */
@@ -164,6 +173,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the removeMax method of the Binary Search Tree.
      * Verifies if the method removes the element from the tree and decrements the size.
      */
@@ -181,6 +191,7 @@ public class BSTreeTest {
 
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the functionality of the InorderIterator in the Binary Search Tree.
      * Verifies if the iterator correctly traverses elements in ascending order.
      */
@@ -197,6 +208,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the functionality of the PreorderIterator in the Binary Search Tree.
      * Verifies if the iterator correctly traverses elements in pre-order traversal.
      */
@@ -213,6 +225,7 @@ public class BSTreeTest {
     }
 
     /**
+     * Test method for {@link BSTree#remove(E)}.
      * Tests the functionality of the PostorderIterator in the Binary Search Tree.
      * Verifies if the iterator correctly traverses elements in post-order traversal.
      */
