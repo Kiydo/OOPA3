@@ -42,8 +42,6 @@ public class PreOrderIterator<E extends Comparable<? super E>> implements Iterat
     }
 
     private BSTreeNode<E> findSuccessor(BSTreeNode<E> node) {
-        // Helper method to find the next node when both left and right subtrees are null
-
         // If the current node is the root, there is no successor
         if (node == root) {
             return null;
