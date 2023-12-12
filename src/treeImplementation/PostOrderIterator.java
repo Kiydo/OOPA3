@@ -6,6 +6,11 @@ import java.util.Stack;
 import utilities.Iterator;
 
 
+/**
+ * An iterator for traversing a binary search tree in post-order traversal.
+ *
+ * @param <E> The type of elements in the binary search tree.
+ */
 public class PostOrderIterator<E extends Comparable<? super E>> implements Iterator<E> {
 
     private Stack<BSTreeNode<E>> stack;
@@ -28,6 +33,11 @@ public class PostOrderIterator<E extends Comparable<? super E>> implements Itera
     
     // // End of Debugging
 
+    /**
+     * Constructs an PostOrderIterator starting from the given root node.
+     *
+     * @param root The root node of the binary search tree.
+     */
     public PostOrderIterator(BSTreeNode<E> root) {
         this.stack = new Stack<>();
         this.current = root;
@@ -39,11 +49,22 @@ public class PostOrderIterator<E extends Comparable<? super E>> implements Itera
         }
     }
 
+    /**
+     * Checks if there is another element in the binary search tree.
+     *
+     * @return True if there is another element, false otherwise.
+     */
     @Override
     public boolean hasNext() {
         return !stack.isEmpty();
     }
 
+    /**
+     * Gets the next element in the binary search tree.
+     *
+     * @return The next element in the binary search tree.
+     * @throws NoSuchElementException If there is no next element.
+     */
     @Override
     public E next() {
         if (!hasNext()) {
